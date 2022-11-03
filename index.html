@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoảng Trời Của Bé</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" media="screen" href='/assets/css/main.css'>
+    <link rel="stylesheet" type="text/css" media="screen" href='/assets/css/style.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div id="main-navbar" class="justify-content-between justify-content-sm-start">
+        <a class="nav-logo" href="/">
+            <img src='/assets/img/logo-50x50.png' alt="Logo">
+        </a>
+        <div class="d-none d-sm-block nav-item position-relative">
+            <!-- Start About KTCB -->
+            <ul class="nav-item-dr-list position-absolute">
+                <a class="nav-dropdown-items">
+                    Giới thiệu chung về KTCB
+                </a>
+                <a class="nav-dropdown-items">
+                    Sứ mệnh của KTCB
+                </a>
+                <a class="nav-dropdown-items">
+                    Giới thiệu về nhân sự KTCB
+                </a>
+                <a class="nav-dropdown-items">
+                    Thông tin liên hệ KTCB
+                </a>
+            </ul>
+            <!-- End About KTCB -->
+            Về KTCB
+        </div>
+        <div class="d-none d-sm-block nav-item position-relative" href="#">
+            <ul class="nav-item-dr-list position-absolute">
+                <a class="nav-dropdown-items">
+                    Hoạt động - dự án đã thực hiện
+                </a>
+                <a class="nav-dropdown-items">
+                    Hoạt động - dự án đang triển khai
+                </a>
+                <a class="nav-dropdown-items">
+                    Giới thiệu về nhân sự KTCB
+                </a>
+                <a class="nav-dropdown-items">
+                    Thông tin liên hệ KTCB
+                </a>
+            </ul>
+            Hoạt Động - Dự Án
+        </div>
+        <div class="d-none d-sm-block nav-item position-relative" href="#">
+            <ul class="nav-item-dr-list position-absolute">
+                <a class="nav-dropdown-items">
+                    Tài liệu training
+                </a>
+                <a class="nav-dropdown-items">
+                    Nội dung training
+                </a>
+                <a class="nav-dropdown-items">
+                    Các hoạt động team building
+                </a>
+            </ul>
+            TNV
+        </div>
+        <div class="d-none d-sm-block nav-item position-relative" href="#">
+            <ul class="nav-item-dr-list position-absolute">
+                <a class="nav-dropdown-items">
+                    Dành cho đối tượng muốn trở thành TNV
+                </a>
+                <a class="nav-dropdown-items">
+                    Dành cho Nhà tài trợ
+                </a>
+            </ul>
+            Tham Gia
+        </div>
+        <div class="d-block d-sm-none">
+            <label for="mobile__header-nav">
+                <i class="fa-solid fa-bars text-light nav-menu-icon"></i>
+            </label>
+        </div>
+    </div>
+    <input type="checkbox" id="mobile__header-nav" class="d-none">
+    <label for="mobile__header-nav" class="modal__overlay">
+    </label>
+    <div class="mobile__header-nav">
+        <div class="mobile__header-nav-wrapper">
+            <ul class="mobile__category-list">
+                <li class="mobile__category-item"><a href="" class="mobile__category-item-link">
+                        Tất cả sản phẩm
+                    </a>
+                </li>
+                <li class="mobile__category-item mobile__category-item--has-child">
+                    <div class="mobile__category-item-link accordion">
+                        <span>Ohui</span>
+                        <i class="fas fa-chevron-right mobile__category-item-icon "></i>
+                    </div>
+                    <ul class="mobile__category-item-child-list panel">
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Ohui Thefirst Tái Sinh </a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Ohui Dưỡng Trắng</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Ohui Prime Advancer</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Ohui Dưỡng Ẩm</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Ohui Chống Lão Hóa</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Ohui Make Up</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Ohui Chống Nắng</a></li>
+
+                    </ul>
+                </li>
+                <li class="mobile__category-item">
+                    <div class="mobile__category-item-link accordion">
+                        <span>Whoo</span>
+                        <i class="fas fa-chevron-right mobile__category-item-icon"></i>
+                    </div>
+                    <ul class="mobile__category-item-child-list panel">
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Bichup </a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Dưỡng Ẩm</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Dưỡng Trắng Trị Nám</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo cấp nước chống oxy hóa</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Tái Sinh</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Make Up</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Chống Nắng</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Spa</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Chống Lão Hóa</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Whoo Hoàn Lưu Cao</a></li>
+
+                    </ul>
+                </li>
+                <li class="mobile__category-item">
+                    <div class="mobile__category-item-link accordion">
+                        <span>Su:m37</span>
+                        <i class="fas fa-chevron-right mobile__category-item-icon"></i>
+                    </div>
+                    <ul class="mobile__category-item-child-list panel">
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Su:m37 Tái Sinh </a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Sm:m37 Chống Lão Hóa </a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Sm:m37 Dưỡng Trắng </a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Su:m37 cấp ẩm water full </a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Su:m37 Làm Sạch </a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Su:m37 Chống Nắng Sun Away</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Su:m37 Make Up</a></li>
+                    </ul>
+                </li>
+                <li class="mobile__category-item">
+                    <div class="mobile__category-item-link accordion">
+                        <span>Set mini</span>
+                        <i class="fas fa-chevron-right mobile__category-item-icon"></i>
+                    </div>
+                    <ul class="mobile__category-item-child-list panel">
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Set Ohui Mini </a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Set Whoo Mini</a></li>
+                        <li class="mobile__category-item-child-item"><a href=""
+                                class="mobile__category-child-item-link">Set Su:m37 Mini</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="mobile__category-list">
+                <li class="mobile__category-item">
+                    <a href="" class="mobile__category-item-link">
+                        <span>Thực phẩm chức năng</span>
+                    </a>
+                </li>
+                <li class="mobile__category-item">
+                    <a href="" class="mobile__category-item-link">
+                        <span>Dịch vụ</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="mobile__category-list">
+                <li class="mobile__category-item">
+                    <a href="" class="mobile__category-item-link">
+                        <span>Tin Tức</span>
+                    </a>
+                </li>
+                <li class="mobile__category-item">
+                    <a href="" class="mobile__category-item-link">
+                        <span>Liên Hệ</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <div class="hero-banner-wrapper w-100 position-relative" id="hero-banner">
+                <div class="position-absolute banner-logo">
+                    <img src='/assets/img/ktcb-logo-512.png' alt="Logo">
+                </div>
+                <div class="position-absolute hero-banner-mission-wrapper w-100 row">
+                    <div class="col col-6 hiding-text">ádas</div>
+                    <div class="col col-6 d-none d-sm-flex align-items-center">
+                        <div class="hero-banner-mission-text p-4">
+                            Chúng tôi tin mỗi đứa trẻ đều xứng đáng có một nụ cười rạng rỡ, cuộc sống hạnh phúc.
+                        </div>
+                    </div>
+                </div>
+                <img class="hero-banner-img" src="/assets/img/hero-banner.png" alt="Hero banner">
+            </div>
+            <!-- #hero-banner -->
+            <div class="vision-section" id="vision">
+                <div class="container">
+                    <div class="title-wrapper">
+                        <h2 class="vision-title mx-auto d-flex justify-content-center h2">
+                            TẦM NHÌN
+                        </h2>
+                        <div class="h4 vision-desc">
+                            <span>Tại Khoảng Trời Của Bé, chúng tôi khát vọng về một tương lai nơi mà sức khỏe và quyền
+                                lợi bệnh nhân được cải thiện thông qua dịch vụ phẫu thuật an toàn.</span>
+                        </div>
+                    </div>
+                    <div class="container row">
+                        <div class="col col-12 col-lg-4 d-flex flex-column align-items-center vision-items">
+                            <div class="vision-img-wrapper"><img
+                                    src="https://operationsmile.org.vn/wp-content/uploads/2018/05/PHL_2012_Silay_184_Sayson_009_Circle-1.jpg"
+                                    alt="" class="vision-items-img"></div>
+                            <div class="vision-items-img-desc">
+                                <span>
+                                    Phẫu thuật an toàn nghĩa là mang đến cho bệnh nhân chất lượng chăm sóc tốt nhất dựa
+                                    trên những tiêu chuẩn y tế cao nhất, bất kể bệnh nhân sống ở bất cứ đâu.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col col-12 col-lg-4 d-flex flex-column align-items-center vision-items">
+                            <div class="vision-img-wrapper"><img
+                                    src="https://operationsmile.org.vn/wp-content/uploads/2018/05/IND_2010_Crowd_Screening_Circle.jpg"
+                                    alt="" class="vision-items-img"></div>
+                            <div class="vision-items-img-desc">
+                                <span>
+                                    Dị tật khe hở môi, vòm miệng là dị tật bẩm sinh phổ biến đứng thứ ba trên thế giới.
+                                    Chỉ với vỏn vẹn 45 phút, một ca phẫu thuật an toàn có thể trao cho một em nhỏ cơ hội
+                                    được hòa nhập với cuộc sống bình thường.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col col-12 col-lg-4 d-flex flex-column align-items-center vision-items">
+                            <div class="vision-img-wrapper"><img
+                                    src="https://operationsmile.org.vn/wp-content/uploads/2018/05/THA_2013_Sisaket_OR_Scene_021_Circle.jpg">
+                            </div>
+                            <div class="vision-items-img-desc">
+                                <span>
+                                    Một đứa trẻ sinh ra với dị tật khe hở môi, vòm miệng có thể phải gánh chịu nguy cơ:
+                                    Suy dinh dưỡng – Khó khăn trong việc nói và phát âm – Sự xa lánh và bắt nạt từ bạn
+                                    bè, xã hội.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="btn btn-outline-info vision-btn">Tìm Hiểu Thêm</a>
+                    </div>
+                </div>
+            </div>
+            <!-- #vision -->
+            <div class="activities pb-5 container" id="activities">
+                <div class="title-wrapper">
+                    <h2 class="vision-title mx-auto d-flex justify-content-center h2">
+                        HOẠT ĐỘNG
+                    </h2>
+                    <div class="h4 vision-desc">
+                        <span>Những hoạt động đã được tổ chức bởi Khoảng Trời Của Bé.</span>
+                    </div>
+                </div>
+                <div class="activities-slider">
+                    <div class=" d-flex flex-column align-items-center">
+                        <div class="vision-img-wrapper"><img
+                                src="https://operationsmile.org.vn/wp-content/uploads/2018/05/PHL_2012_Silay_184_Sayson_009_Circle-1.jpg"
+                                alt="" class="vision-items-img"></div>
+                        <div class="vision-items-img-desc">
+                            <span>
+                                Phẫu thuật an toàn nghĩa là mang đến cho bệnh nhân chất lượng chăm sóc tốt nhất dựa trên
+                                những tiêu chuẩn y tế cao nhất, bất kể bệnh nhân sống ở bất cứ đâu.
+                            </span>
+                        </div>
+                    </div>
+                    <div class=" d-flex flex-column align-items-center ">
+                        <div class="vision-img-wrapper"><img
+                                src="https://operationsmile.org.vn/wp-content/uploads/2018/05/IND_2010_Crowd_Screening_Circle.jpg"
+                                alt="" class="vision-items-img"></div>
+                        <div class="vision-items-img-desc">
+                            <span>
+                                Dị tật khe hở môi, vòm miệng là dị tật bẩm sinh phổ biến đứng thứ ba trên thế giới. Chỉ
+                                với vỏn vẹn 45 phút, một ca phẫu thuật an toàn có thể trao cho một em nhỏ cơ hội được
+                                hòa nhập với cuộc sống bình thường.
+                            </span>
+                        </div>
+                    </div>
+                    <div class=" d-flex flex-column align-items-center ">
+                        <div class="vision-img-wrapper"><img
+                                src="https://operationsmile.org.vn/wp-content/uploads/2018/05/THA_2013_Sisaket_OR_Scene_021_Circle.jpg">
+                        </div>
+                        <div class="vision-items-img-desc">
+                            <span>
+                                Một đứa trẻ sinh ra với dị tật khe hở môi, vòm miệng có thể phải gánh chịu nguy cơ: Suy
+                                dinh dưỡng – Khó khăn trong việc nói và phát âm – Sự xa lánh và bắt nạt từ bạn bè, xã
+                                hội.
+                            </span>
+                        </div>
+                    </div>
+                    <div class=" d-flex flex-column align-items-center ">
+                        <div class="vision-img-wrapper"><img
+                                src="https://operationsmile.org.vn/wp-content/uploads/2018/05/PHL_2012_Silay_184_Sayson_009_Circle-1.jpg"
+                                alt="" class="vision-items-img"></div>
+                        <div class="vision-items-img-desc">
+                            <span>
+                                Phẫu thuật an toàn nghĩa là mang đến cho bệnh nhân chất lượng chăm sóc tốt nhất dựa trên
+                                những tiêu chuẩn y tế cao nhất, bất kể bệnh nhân sống ở bất cứ đâu.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- #activities -->
+            </div>
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+
+    <footer id="colophon" class="site-footer footer-wrapper pt-5" role="contentinfo">
+        <div class="row">
+            <div class="col col-12 col-lg-6">
+                <div class="row">
+                    <div class="col col-12 col-lg-6 footer-items align-items-center d-flex flex-column">
+                        <a href="/" class="footer-items-logo d-block pb-3">
+                            <img src="/assets/img/ktcb-logo-rectangle.png" alt="">
+                        </a>
+                        <div class="social-desc">
+                            Các kênh xã hội của KTCB
+                        </div>
+                        <div class="social-networks">
+                            <a href="https://www.facebook.com/khoangtroicuabektcb" target="_blank"
+                                class="social-networks-items social-networks-items--facebook d-block">
+                                <i class="fa-brands fa-facebook footer-items-content-row-icon "></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-6 footer-items align-items-center d-flex flex-column">
+                        <div class="footer-items-title pb-4">
+                            <span>LIÊN HỆ</span>
+                        </div>
+                        <div class="social-networks d-flex flex-column">
+                            <div class="footer-items-content-row d-flex">
+                                <div class="footer-items-icon-wrapper  pr-3">
+                                    <i class="fa-solid fa-mobile-button footer-items-content-row-icon d-block"></i>
+                                </div>
+                                <a href="tel:0705081088"
+                                    class="social-networks-items social-networks-items--phone social-networks-items--facebook d-block">
+                                    0705081088
+                                </a>
+                            </div>
+                            <div class="footer-items-content-row d-flex">
+                                <div class="footer-items-icon-wrapper pr-3">
+                                    <i class="fa-solid fa-envelope footer-items-content-row-icon"></i>
+                                </div>
+                                <a href="mailto:hoangtroicuabe.kby@gmail.com"
+                                    class="social-networks-items social-networks-items--phone social-networks-items--facebook d-block">
+                                    khoangtroicuabe.kby@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-6">
+                <div class="footer-items align-items-center d-flex flex-column text-center">
+                    <div class="footer-items-title pb-4">
+                        <span class="text-center">KẾT NỐI VỚI KHOẢNG TRỜI CỦA BÉ</span>
+                    </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/khoangtroicuabektcb/" data-tabs="timeline"
+                        data-width="320" data-height="" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/khoangtroicuabektcb/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/khoangtroicuabektcb/">Khoảng Trời Của Bé</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- #colophon -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src='/assets/js/main.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0"
+        nonce="7GSuKSU5"></script>
+</body>
+
+</html>
