@@ -1,0 +1,25 @@
+.title-section {
+    position: relative;
+    text-transform: capitalize;
+    font-weight: bold;
+    // text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    font-family: $secondary-font;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -25px;
+        width: 12px;
+        height: 90%;
+        border: 0;
+        border-radius: 6px;
+        @include backgroundPink;
+    }
+}
+
+.span-section {
+    font-family: $secondary-font;
+    opacity: 0.8;
+}

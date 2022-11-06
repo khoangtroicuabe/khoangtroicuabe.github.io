@@ -1,0 +1,56 @@
+#main-navbar {
+    background-color: #fff;
+}
+
+.header-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 60px;
+    color: #fff;
+    // @include backgroundPink;
+    background-color: $secondary-color-2;
+
+    &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        i {
+            font-size: 24px;
+        }
+    }
+}
+
+.mobile__header-nav {
+    .accordion {
+        padding: 0;
+
+        &-button:focus {
+            z-index: 3;
+            border-color: none !important;
+            outline: 0;
+            box-shadow: none !important;
+        }
+
+        &-button:not(.collapsed) {
+            // color: $primary-color-2;
+            background-color: none !important;
+            box-shadow: none !important;
+        }
+
+        &-body {
+            p {
+                transition: all 0.3s linear;
+            }
+
+            p:hover {
+                transform: translateX(10px);
+                color: $primary-color-2;
+            }
+        }
+    }
+
+}

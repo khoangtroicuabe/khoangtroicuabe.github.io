@@ -1,0 +1,10 @@
+html {
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden scroll;
+}
+
+body {
+    font-family: $primary-font;
+}
