@@ -1,0 +1,12 @@
+// Command watch SASS: sass assets/sass/app.scss assets/css/app.css --watch
+
+@import "variables";
+@import "reset";
+@import "base";
+@import "mixins";
+@import "components/button";
+@import "components/navbar";
+@import "components/footer";
+@import "components/background";
+@import "components/text";
+@import "components/card";
