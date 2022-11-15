@@ -1,5 +1,6 @@
 let prevScrollpos = window.pageYOffset;
 
+// Handle Navbar
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -12,28 +13,14 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-window.onload = () => {
-  let banner = document.querySelector(".header-intro");
-  banner.style.marginTop = `${
-    document.querySelector("#main-navbar").clientHeight
-  }px`;
-};
-
-// var acc = document.querySelectorAll(".accordion");
-// console.log(acc);
-// var accIndx;
-// for (accIndx = 0; accIndx < acc.length; accIndx++) {
-//   acc[accIndx].addEventListener("click", function () {
-//     this.classList.toggle("active");
-//     this.classList.toggle("rotate-down");
-//     var panel = this.nextElementSibling;
-//     if (panel.style.maxHeight) {
-//       panel.style.maxHeight = null;
-//     } else {
-//       panel.style.maxHeight = panel.scrollHeight + "px";
-//     }
-//   });
-// }
+// window.onload = () => {
+//   let banner = document.querySelector("#header-intro");
+//   let mainHeight = document.querySelector("#main-navbar");
+//   if (banner != null) {
+//     // console.log(mainHeight.clientHeight);
+//     banner.style.marginTop = `${mainHeight.clientHeight}px`;
+//   }
+// };
 
 let onResizeBody = () => {
   let navbar = document.querySelector("#main-navbar");
@@ -44,6 +31,7 @@ let onResizeBody = () => {
   }
 };
 
+// SLider
 $(document).ready(() => {
   let defaultOptions = {
     infinite: true,
@@ -83,8 +71,9 @@ $(document).ready(() => {
   });
 });
 
+// Back To Top
 $(document).ready(function () {
-  var btn = $("#back-to-top");
+  let btn = $("#back-to-top");
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
@@ -100,18 +89,65 @@ $(document).ready(function () {
   });
 });
 
-fetch("../../includes/header.html")
-  .then((response) => {
-    return response.text();
-  })
-  .then((data) => {
-    document.querySelector("header").innerHTML = data;
+// Fetch Contents
+{
+  fetch("../../includes/header.html")
+    .then((response) => {
+      return response.text();
+    })
+    .then((data) => {
+      document.querySelector("header").innerHTML = data;
+    });
+
+  fetch("../../includes/footer.html")
+    .then((response) => {
+      return response.text();
+    })
+    .then((data) => {
+      document.querySelector("footer").innerHTML = data;
+    });
+}
+
+(() => {
+  "use strict";
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll(".needs-validation");
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach((form) => {
+    form.addEventListener(
+      "submit",
+      (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
+
+// Read more
+$(document).ready(() => {
+  $(".btn-vision").click(() => {
+    $(".more-vision").slideToggle();
+    if ($(".btn-vision").text() == "Xem Thêm") {
+      $(".btn-vision").text("Rút Gọn");
+    } else {
+      $(".btn-vision").text("Xem Thêm");
+    }
   });
 
-fetch("../../includes/footer.html")
-  .then((response) => {
-    return response.text();
-  })
-  .then((data) => {
-    document.querySelector("footer").innerHTML = data;
+  $(".btn-mission").click(() => {
+    $(".more-mission").slideToggle();
+    if ($(".btn-mission").text() == "Xem Thêm") {
+      $(".btn-mission").text("Rút Gọn");
+    } else {
+      $(".btn-mission").text("Xem Thêm");
+    }
   });
+});

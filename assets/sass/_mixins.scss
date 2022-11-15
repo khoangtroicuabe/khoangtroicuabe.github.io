@@ -6,6 +6,13 @@
     background-image: linear-gradient(to left bottom, $secondary-color-1, $secondary-color-2);
 }
 
+@mixin textGradient {
+    @include backgroundPink;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @mixin responsive($breakpoint) {
     @if $breakpoint ==min_sm {
         @media (min-width: $sm) {
