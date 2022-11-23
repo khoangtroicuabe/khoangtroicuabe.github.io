@@ -279,6 +279,7 @@
     flex-wrap: wrap;
     gap: 100px;
     position: relative;
+    margin-bottom: 50px;
 
     @include responsive(max_xl) {
         gap: 40px;
@@ -295,6 +296,10 @@
             25px 30px 30px rgba(0, 0, 0, 0.05),
             inset -20px -20px 25px rgba(255, 255, 255, 0.9);
         transition: all 0.3s linear;
+
+        // @include responsive(max_sm) {
+        //     width: 300px;
+        // }
 
         &:first-child {
             border-radius: 37% 63% 55% 45% / 39% 30% 70% 61%;
@@ -319,6 +324,12 @@
             background-color: #fff;
             opacity: 0.9;
             box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+            @include responsive(max_sm) {
+                top: unset;
+                bottom: 80px;
+                left: 28%;
+            }
         }
 
         &::after {
@@ -332,6 +343,16 @@
             background-color: #fff;
             opacity: 0.9;
             box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+            @include responsive(max_sm) {
+                top: unset;
+                bottom: 60px;
+                left: 35%;
+            }
+        }
+
+        &-inner {
+            position: relative;
         }
 
         &-title {
@@ -353,11 +374,15 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @include responsive (max_sm) {
+                padding: 15px 20px;
+            }
         }
 
         &-content {
             position: absolute;
-            top: 40%;
+            top: 50%;
             transform: translateY(-50%);
             padding: 0 40px;
             border-radius: 50%;
@@ -383,9 +408,19 @@
             transform: translateX(-50%);
             border: 0;
             border-radius: 100rem;
-            padding: 15px 25px;
+            width: 60px;
+            height: 60px;
+            padding: 15px;
             color: #fff;
             transition: all 0.3s linear;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                font-size: 24px;
+            }
 
             &:hover {
                 opacity: 0.8;
@@ -409,7 +444,9 @@
 
 .introduction,
 .team,
-.contact {
+.contact,
+.acti-news,
+.news {
     @include responsive(max_lg) {
         margin-top: 80px;
     }
@@ -496,5 +533,58 @@
             }
         }
 
+    }
+}
+
+.news {
+    &-status {
+        color: #fff;
+        border-radius: 100rem;
+        padding: 8px 20px;
+        @include backgroundPink;
+
+        @include responsive(max_sm) {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+    }
+
+    &-posted {
+        opacity: 0.7;
+        font-style: italic;
+
+        @include responsive(max_sm) {
+            font-size: 14px;
+        }
+    }
+
+    &-title {
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    &-image {
+        &-frame {
+            max-height: 300px;
+            overflow: hidden;
+            border-radius: 6px;
+
+            @include responsive(max_lg) {
+                max-height: 500px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 6px;
+            }
+        }
+
+        p {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.85;
+        }
     }
 }

@@ -18,7 +18,8 @@
     padding: 12px 24px;
     border-radius: 6px;
     color: #fff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     @include backgroundBlue;
 }
 
@@ -94,5 +95,42 @@
 
     @include responsive(max_md) {
         right: 0;
+    }
+}
+
+.acti-news {
+    position: relative;
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        &-link {
+            padding: 15px 35px;
+            color: #000;
+            border-radius: 100rem 0 100rem 0;
+            transition: all 0.3s linear;
+            background-image: linear-gradient(to right bottom, rgb(250, 124, 187, 0.4), rgba(241, 70, 87, 0.3));
+
+            @include responsive(max_sm) {
+                padding: 15px 30px;
+            }
+
+            &:hover {
+                color: #fff;
+                background-image: linear-gradient(to right bottom, #fa7cbb, #f14658);
+            }
+        }
+
+        &-link.active {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            background-image: linear-gradient(to right bottom, #fa7cbb, #f14658);
+        }
+    }
+
+    .nav-pills {
+        --bs-nav-pills-link-active-bg: unset;
     }
 }

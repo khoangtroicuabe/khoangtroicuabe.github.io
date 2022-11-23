@@ -2,25 +2,16 @@ let prevScrollpos = window.pageYOffset;
 
 // Handle Navbar
 window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector("#main-navbar").style.top = "0";
-  } else {
-    document.querySelector("#main-navbar").style.top = `-${
-      document.querySelector("#main-navbar").clientHeight
-    }px`;
+  if (window.innerWidth > 768) {
+    let currentScrollPos = window.pageYOffset;
+    prevScrollpos > currentScrollPos
+      ? (document.querySelector("#main-navbar").style.top = "0")
+      : (document.querySelector("#main-navbar").style.top = `-${
+          document.querySelector("#main-navbar").clientHeight
+        }px`);
+    prevScrollpos = currentScrollPos;
   }
-  prevScrollpos = currentScrollPos;
 };
-
-// window.onload = () => {
-//   let banner = document.querySelector("#header-intro");
-//   let mainHeight = document.querySelector("#main-navbar");
-//   if (banner != null) {
-//     // console.log(mainHeight.clientHeight);
-//     banner.style.marginTop = `${mainHeight.clientHeight}px`;
-//   }
-// };
 
 let onResizeBody = () => {
   let navbar = document.querySelector("#main-navbar");
@@ -132,22 +123,60 @@ $(document).ready(function () {
 })();
 
 // Read more
-$(document).ready(() => {
-  $(".btn-vision").click(() => {
-    $(".more-vision").slideToggle();
-    if ($(".btn-vision").text() == "Xem Thêm") {
-      $(".btn-vision").text("Rút Gọn");
-    } else {
-      $(".btn-vision").text("Xem Thêm");
-    }
-  });
+// $(document).ready(() => {
+//   $(".btn-vision").click(() => {
+//     $(".more-vision").slideToggle();
+//     if ($(".btn-vision").text() == "Xem Thêm") {
+//       $(".btn-vision").text("Rút Gọn");
+//     } else {
+//       $(".btn-vision").text("Xem Thêm");
+//     }
+//   });
 
-  $(".btn-mission").click(() => {
-    $(".more-mission").slideToggle();
-    if ($(".btn-mission").text() == "Xem Thêm") {
-      $(".btn-mission").text("Rút Gọn");
-    } else {
-      $(".btn-mission").text("Xem Thêm");
+//   $(".btn-mission").click(() => {
+//     $(".more-mission").slideToggle();
+//     if ($(".btn-mission").text() == "Xem Thêm") {
+//       $(".btn-mission").text("Rút Gọn");
+//     } else {
+//       $(".btn-mission").text("Xem Thêm");
+//     }
+//   });
+// });
+
+const getDataJsonByUrl = (data) => {
+  data.json().then((json) => {
+    if (!json) return;
+    console.log(json["imgs"]);
+    const imgs = json["imgs"];
+    if (imgs) {
+      imgs.forEach((img, index) => {
+        const imgEL = document.querySelector(`#img-${index + 1}`);
+        if (imgEL) {
+          imgEL.src = img;
+        }
+      });
+    }
+    for (const key in json) {
+      if (Object.hasOwnProperty.call(json, key)) {
+        const content = json[key];
+        const ele = document.querySelector(`#${key}`);
+        if (ele) {
+          ele.innerHTML += content;
+        }
+      }
     }
   });
-});
+};
+
+const getMainDataJson = (data) => {
+  data.json().then((x) => {
+    if (x) {
+      const url = window.location.href.split("pages/")[1].replace(".html", "");
+      if (url) {
+        fetch(`/assets/jsons/${url}.json`).then(getDataJsonByUrl);
+      }
+    }
+  });
+};
+
+fetch("/assets/jsons/main.json").then(getMainDataJson);

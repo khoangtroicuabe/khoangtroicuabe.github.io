@@ -46,10 +46,6 @@ ul {
 
 }
 
-.active span {
-    color: red;
-}
-
 .panel {
     background-color: white;
     max-height: 0;
