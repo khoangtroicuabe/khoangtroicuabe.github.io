@@ -10,6 +10,10 @@
     align-items: center;
     position: relative;
 
+    @include responsive(max_sm) {
+        background-attachment: local;
+    }
+
     &-text {
         color: #fff;
         display: flex;
@@ -26,6 +30,10 @@
 
         @include responsive(max_xl) {
             width: 70%;
+        }
+
+        @include responsive(max_sm) {
+            justify-content: flex-start;
         }
 
         h2::before {
@@ -97,4 +105,3 @@
         top: 3%;
     }
 }
-

@@ -13,10 +13,6 @@
             border-radius: 10px;
             transition: all 0.3s linear;
         }
-
-        // &:hover img {
-        //     transform: scale(1.2);
-        // }
     }
 
     &-content {
@@ -50,15 +46,14 @@
             transition: all 0.4s ease-out;
         }
 
-        // &:hover h3 {
-        //     color: $secondary-color-2;
-        //     transform: translateX(10px);
-        // }
-
-        // &:hover i {
-        //     color: #fff;
-        //     @include backgroundPink;
-        // }
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
     }
 }
 

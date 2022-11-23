@@ -1,10 +1,9 @@
-<div id="main-navbar" class="container-fluid d-flex px-md-5">
+<div id="main-navbar" class="container-fluid d-flex px-md-5 px-3">
     <a class="nav-logo" href="/">
         <img src='/assets/img/logo-50x50.png' alt="Logo">
     </a>
     <div class="d-flex align-items-center justify-content-center">
         <div class="d-none d-md-block nav-item position-relative">
-            <!-- Start About KTCB -->
             <ul class="nav-item-dr-list position-absolute">
                 <a class="nav-dropdown-items" href="/pages/introduction.html">
                     Giới thiệu chung về KTCB
@@ -12,25 +11,21 @@
                 <a class="nav-dropdown-items" href="/pages/introduction-team.html">
                     Giới thiệu về nhân sự KTCB
                 </a>
-                <a class="nav-dropdown-items" href="/pages/contact.html">
-                    Thông tin liên hệ KTCB
-                </a>
             </ul>
-            <!-- End About KTCB -->
             Về KTCB
         </div>
-        <div class="d-none d-md-block nav-item position-relative" href="#">
+        <div class="d-none d-md-block nav-item position-relative">
             <ul class="nav-item-dr-list position-absolute">
                 <a class="nav-dropdown-items">
-                    Hoạt động - dự án đã thực hiện
+                    Dành cho đối tượng muốn trở thành TNV
                 </a>
                 <a class="nav-dropdown-items">
-                    Hoạt động - dự án đang triển khai
+                    Dành cho Nhà tài trợ
                 </a>
             </ul>
-            Hoạt Động - Dự Án
+            Tham Gia
         </div>
-        <div class="d-none d-md-block nav-item position-relative" href="#">
+        <div class="d-none d-md-block nav-item position-relative">
             <ul class="nav-item-dr-list position-absolute">
                 <a class="nav-dropdown-items">
                     Tài liệu training
@@ -44,19 +39,11 @@
             </ul>
             TNV
         </div>
-        <div class="d-none d-md-block nav-item position-relative" href="#">
-            <ul class="nav-item-dr-list position-absolute">
-                <a class="nav-dropdown-items">
-                    Dành cho đối tượng muốn trở thành TNV
-                </a>
-                <a class="nav-dropdown-items">
-                    Dành cho Nhà tài trợ
-                </a>
-            </ul>
-            Tham Gia
+        <div class="d-none d-md-block nav-item position-relative">
+            <a href="/pages/activity.html">Hoạt Động - Dự Án</a>
         </div>
-        <button class="d-none d-md-block btn-filled-pink ms-lg-5">
-            Đăng ký ngay
+        <button class="d-none d-md-block btn-filled-pink ms-lg-5" onclick="location.href='/pages/contact.html'">
+            Liên hệ ngay
         </button>
     </div>
     <div class="d-block d-md-none">
@@ -106,9 +93,6 @@
                             <a href="/pages/introduction-team.html">
                                 <p>Giới thiệu về nhân sự KTCB</p>
                             </a>
-                            <a href="/pages/contact.html">
-                                <p class="mb-0">Thông tin liên hệ KTCB</p>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -122,10 +106,10 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <a href="#">
+                            <a href="/pages/activity.html">
                                 <p>Hoạt động - dự án đã thực hiện</p>
                             </a>
-                            <a href="#">
+                            <a href="/pages/activity.html">
                                 <p class="mb-0">Hoạt động - dự án đã triển khai</p>
                             </a>
                         </div>
@@ -174,8 +158,9 @@
                 </div>
             </div>
             <div class="d-flex justify-content-start align-items-center px-3 mt-4">
-                <button class="btn-empty-blue d-flex justify-content-center align-items-center gap-2">
-                    Đăng ký ngay
+                <button class="btn-empty-blue d-flex justify-content-center align-items-center gap-2"
+                    onclick="location.href='/pages/contact.html'">
+                    Liên hệ ngay
                     <i class="fa-solid fa-location-arrow"></i>
                 </button>
             </div>

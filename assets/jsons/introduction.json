@@ -1,0 +1,10 @@
+{
+  "title": "Title 1",
+  "title-content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis aut quos saepe tempora repellat eligendi Sapiente vero sint aperiam quod delectus porro rem quibusdam impedit provident, aspernatur at architecto!",
+  "title-2": "Title 2",
+  "title-content-2": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis aut quos saepe tempora repellat eligendi Sapiente vero sint aperiam quod delectus porro rem quibusdam impedit provident, aspernatur at architecto!",
+  "imgs": [
+    "https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+  ]
+}
