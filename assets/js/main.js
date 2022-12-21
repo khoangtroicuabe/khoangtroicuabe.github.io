@@ -1,7 +1,9 @@
+const sliderHero = document.querySelector(".single-item");
 let prevScrollpos = window.pageYOffset;
+let primary = document.querySelector("#primary");
+primary.style.paddingTop = "80px";
 
-// Handle Navbar
-window.onscroll = function () {
+window.addEventListener("scroll", () => {
   if (window.innerWidth > 768) {
     let currentScrollPos = window.pageYOffset;
     prevScrollpos > currentScrollPos
@@ -11,18 +13,25 @@ window.onscroll = function () {
         }px`);
     prevScrollpos = currentScrollPos;
   }
-};
-
-let onResizeBody = () => {
-  let navbar = document.querySelector("#main-navbar");
-  let primary = document.querySelector("#primary");
-
-  if (navbar && primary) {
-    primary.style.paddingTop = `${navbar.clientHeight}px`;
-  }
-};
+});
 
 // SLider
+$(document).ready(() => {
+  $(".single-item").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    arrows: false,
+    // appendDots: $('.slick-slider-dots'),
+    // prevArrow:
+    //   '<div class="slick-prev position-absolute"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
+    // nextArrow:
+    //   '<div class="slick-next position-absolute"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
+  });
+});
+
 $(document).ready(() => {
   let defaultOptions = {
     infinite: true,
@@ -121,27 +130,6 @@ $(document).ready(function () {
     );
   });
 })();
-
-// Read more
-// $(document).ready(() => {
-//   $(".btn-vision").click(() => {
-//     $(".more-vision").slideToggle();
-//     if ($(".btn-vision").text() == "Xem Thêm") {
-//       $(".btn-vision").text("Rút Gọn");
-//     } else {
-//       $(".btn-vision").text("Xem Thêm");
-//     }
-//   });
-
-//   $(".btn-mission").click(() => {
-//     $(".more-mission").slideToggle();
-//     if ($(".btn-mission").text() == "Xem Thêm") {
-//       $(".btn-mission").text("Rút Gọn");
-//     } else {
-//       $(".btn-mission").text("Xem Thêm");
-//     }
-//   });
-// });
 
 const getDataJsonByUrl = (data) => {
   data.json().then((json) => {

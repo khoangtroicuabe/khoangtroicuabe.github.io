@@ -1,136 +1,171 @@
 .btn-filled-pink {
-    border: 0;
-    padding: 12px 24px;
-    border-radius: 6px;
-    color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    @include backgroundPink;
-    transition: all 0.3s linear;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  @include backgroundPink;
+  transition: all 0.3s linear;
 
-    &:hover {
-        color: #fff;
-        transform: translateY(-6px);
-    }
+  &:hover {
+    color: #fff;
+    transform: translateY(-6px);
+  }
 }
 
 .btn-filled-blue {
-    border: 0;
-    padding: 12px 24px;
-    border-radius: 6px;
-    color: #fff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    @include backgroundBlue;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  @include backgroundBlue;
 }
 
 .btn-empty-pink {
-    border: 0;
-    padding: 12px 24px;
-    border-radius: 6px;
-    color: $secondary-color-2;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 1px solid $secondary-color-2;
-    transition: all 0.3s linear;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: $secondary-color-2;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid $secondary-color-2;
+  transition: all 0.3s linear;
 
-    &:hover {
-        transform: translateY(-5px);
-        @include backgroundPink;
-        color: #fff;
-        border: 1px solid $secondary-color-2;
-    }
+  &:hover {
+    transform: translateY(-5px);
+    @include backgroundPink;
+    color: #fff;
+    border: 1px solid $secondary-color-2;
+  }
 }
 
 .btn-empty-blue {
-    border: 0;
-    padding: 12px 24px;
-    border-radius: 6px;
-    color: $primary-color-2;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 1px solid $primary-color-2;
-    transition: all 0.3s linear;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: $primary-color-2;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid $primary-color-2;
+  transition: all 0.3s linear;
 
-    &:hover {
-        transform: translateY(-5px);
-        @include backgroundBlue;
-        color: #fff;
-        border: 1px solid $primary-color-2;
-    }
+  &:hover {
+    transform: translateY(-5px);
+    @include backgroundBlue;
+    color: #fff;
+    border: 1px solid $primary-color-2;
+  }
 }
 
 .slick-prev,
 .slick-next {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    border-radius: 50%;
-    background-color: #eee;
-    cursor: pointer;
-    z-index: 10;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 50%;
+  background-color: #eee;
+  cursor: pointer;
+  z-index: 10;
 
-    &:hover {
-        color: #fff;
-        @include backgroundPink;
-    }
+  &:hover {
+    color: #fff;
+    @include backgroundPink;
+  }
 }
 
 .slick-prev {
-    top: 50%;
-    left: -10px;
-    transform: translate(0, -50%);
+  top: 50%;
+  left: -10px;
+  transform: translate(0, -50%);
 
-    @include responsive(max_md) {
-        left: 0;
-    }
+  @include responsive(max_md) {
+    left: 0;
+  }
 }
 
 .slick-next {
-    top: 50%;
-    right: -10px;
-    transform: translate(0, -50%);
+  top: 50%;
+  right: -10px;
+  transform: translate(0, -50%);
 
-    @include responsive(max_md) {
-        right: 0;
-    }
+  @include responsive(max_md) {
+    right: 0;
+  }
 }
 
-.acti-news {
-    position: relative;
-    .nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+.slick-dots {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-        &-link {
-            padding: 15px 35px;
-            color: #000;
-            border-radius: 100rem 0 100rem 0;
-            transition: all 0.3s linear;
-            background-image: linear-gradient(to right bottom, rgb(250, 124, 187, 0.4), rgba(241, 70, 87, 0.3));
+  li {
+    margin: 0 6px;
 
-            @include responsive(max_sm) {
-                padding: 15px 30px;
-            }
-
-            &:hover {
-                color: #fff;
-                background-image: linear-gradient(to right bottom, #fa7cbb, #f14658);
-            }
-        }
-
-        &-link.active {
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-            background-image: linear-gradient(to right bottom, #fa7cbb, #f14658);
-        }
+    button {
+      border: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: all 0.3 linear;
+      background-color: #fff;
+      color: #fff;
     }
 
-    .nav-pills {
-        --bs-nav-pills-link-active-bg: unset;
+    &.slick-active {
+      button {
+        transition: all 0.3 linear;
+        color: $secondary-color-2;
+        background-color: $secondary-color-2;
+      }
     }
+  }
+}
+
+.acti-news,
+.contact {
+  position: relative;
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &-link {
+      padding: 15px 35px;
+      color: #000;
+      border-radius: 100rem 0 100rem 0;
+      transition: all 0.3s linear;
+      background-image: linear-gradient(to right bottom, rgb(250, 124, 187, 0.4), rgba(241, 70, 87, 0.3));
+
+      @include responsive(max_sm) {
+        padding: 15px 25px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: #fff;
+        background-image: linear-gradient(to right bottom, #fa7cbb, #f14658);
+      }
+    }
+
+    &-link.active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      background-image: linear-gradient(to right bottom, #fa7cbb, #f14658);
+    }
+  }
+
+  .nav-pills {
+    --bs-nav-pills-link-active-bg: unset;
+  }
 }

@@ -1,56 +1,74 @@
 #main-navbar {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .header-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  height: 60px;
+  color: #fff;
+  background-color: $secondary-color-2;
+
+  &-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    height: 60px;
-    color: #fff;
-    // @include backgroundPink;
-    background-color: $secondary-color-2;
+    gap: 10px;
 
-    &-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-
-        i {
-            font-size: 24px;
-        }
+    i {
+      font-size: 24px;
     }
+  }
 }
 
 .mobile__header-nav {
-    .accordion {
-        padding: 0;
+  .accordion {
+    padding: 0;
 
-        &-button:focus {
-            z-index: 3;
-            border-color: none !important;
-            outline: 0;
-            box-shadow: none !important;
-        }
-
-        &-button:not(.collapsed) {
-            // color: $primary-color-2;
-            background-color: none !important;
-            box-shadow: none !important;
-        }
-
-        &-body {
-            p {
-                transition: all 0.3s linear;
-            }
-
-            p:hover {
-                transform: translateX(10px);
-                color: $primary-color-2;
-            }
-        }
+    &-button:focus {
+      z-index: 3;
+      border-color: none !important;
+      outline: 0;
+      box-shadow: none !important;
     }
+
+    &-button:not(.collapsed) {
+      color: $secondary-color-2;
+      background-color: unset;
+      box-shadow: none !important;
+
+      &::after {
+        background-image: inherit;
+      }
+    }
+    // &-button:not(.collapsed)::after {
+
+    // }
+
+    &-body {
+      p {
+        transition: all 0.3s linear;
+      }
+
+      p:hover {
+        transform: translateX(10px);
+        color: $secondary-color-2;
+      }
+    }
+  }
+}
+
+.header-navbar {
+  #main-navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+
+    .nav-item {
+      color: #fff;
+    }
+  }
+
 
 }
