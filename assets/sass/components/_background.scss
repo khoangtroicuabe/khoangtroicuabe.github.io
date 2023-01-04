@@ -1,107 +1,107 @@
 .background-intro {
-    height: 60vh;
-    background-image: url(../img/background2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  height: 60vh;
+  background-image: url(../img/background2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @include responsive(max_sm) {
+    background-attachment: local;
+  }
+
+  &-text {
+    color: #fff;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    position: relative;
+    justify-content: center;
+    padding: 40px;
+    width: 50%;
+    height: 70%;
+    border: 0;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    outline: 15px solid #fff;
+
+    @include responsive(max_xl) {
+      width: 70%;
+    }
 
     @include responsive(max_sm) {
-        background-attachment: local;
+      justify-content: flex-start;
     }
 
-    &-text {
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 40px;
-        width: 50%;
-        height: 70%;
-        border: 0;
-        border-radius: 10px;
-        backdrop-filter: blur(8px);
-        outline: 15px solid #fff;
-
-        @include responsive(max_xl) {
-            width: 70%;
-        }
-
-        @include responsive(max_sm) {
-            justify-content: flex-start;
-        }
-
-        h2::before {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 5px;
-            border: 0;
-            border-radius: 10px;
-            @include backgroundPink;
-        }
-
-        i {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 20px;
-            position: absolute;
-            top: -50px;
-            right: -60px;
-            @include backgroundPink;
-        }
+    h2::before {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 5px;
+      border: 0;
+      border-radius: 10px;
+      @include backgroundPink;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 20px;
+      position: absolute;
+      top: -50px;
+      right: -60px;
+      @include backgroundPink;
     }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .vision-form-background {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    width: 100%;
-    height: 200px;
-    background-image: linear-gradient(to right bottom, #f40076, #df98fa);
-    border-radius: 66% 34% 55% 45% / 51% 53% 47% 49%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to right bottom, #f40076, #df98fa);
+  border-radius: 66% 34% 55% 45% / 51% 53% 47% 49%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .timeline-background {
-    position: absolute;
-    top: 20px;
-    left: -15%;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background-image: linear-gradient(to right bottom, #f40076, #df98fa);
+  position: absolute;
+  top: 20px;
+  left: -15%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right bottom, #f40076, #df98fa);
 
-    @include responsive(max_lg) {
-        display: none;
-    }
+  @include responsive(max_lg) {
+    display: none;
+  }
 
-    @include responsive(max_md) {
-        display: block;
-        width: 150px;
-        height: 150px;
-        left: unset;
-        right: -15%;
-        top: 3%;
-    }
+  @include responsive(max_md) {
+    display: block;
+    width: 150px;
+    height: 150px;
+    left: unset;
+    right: -15%;
+    top: 3%;
+  }
 }

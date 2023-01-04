@@ -1,14 +1,14 @@
 html {
-    scroll-behavior: smooth;
-    position: relative;
-    // min-height: 100vh;
-    overflow: hidden scroll;
+  scroll-behavior: smooth;
+  position: relative;
+  // min-height: 100vh;
+  overflow: hidden scroll;
 }
 
 body {
-    font-family: $primary-font;
+  font-family: $primary-font;
 }
 
 #primary {
-    overflow: hidden;
+  overflow: hidden;
 }
